@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/pdfjs-dist@2.4.456/build/pdf.min.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?version=3.52.1&features=URL"></script>
+    <style>
+      #the-canvas {
+        border: 1px solid black;
+        direction: ltr;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>ACT Lab Online Consent</h1>
+    <div>
+      <button id="prev">Previous</button>
+      <button id="next">Next</button>
+      &nbsp; &nbsp;
+      <span>
+        Page: <span id="page_num"></span> / <span id="page_count"> </span>
+      </span>
+    </div>
+
+    <canvas id="the-canvas"></canvas>
+    <script type="text/javascript" src="./pdf-view.js"></script>
+  </body>
+</html>
