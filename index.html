@@ -7,7 +7,7 @@
     <style>
       body {
         background-color: #222222;
-        font-family: "Arial Black", Gadget, sans-serif;
+        font-family: "Arial", Gadget, sans-serif;
         color: #eeeeee;
       }
       a:link {
@@ -43,18 +43,21 @@
       <h1>ACT Lab Online Consent</h1>
       <h3>
         Please read the consent form below, and either<br />click the
-        <span style="color: #4caf50;">ACCEPT</span> button to continue,<br />
-        or close the tab to decline.
+        <span style="color: #4caf50;">ACCEPT</span> button to
+        <span style="color: #4caf50;">continue</span>,<br />
+        or <span style="color: #d8565f;">CLOSE</span> the tab to
+        <span style="color: #d8565f;">decline</span>.
       </h3>
       <object
         data="./actlab_online_consent.pdf"
         style="width: 70%; height: 72vh;"
         type="application/pdf"
       >
-        <h2>Your browser doesn't support embedded PDFs.</h2>
+        <h2>Your browser does not support embedded PDFs.</h2>
         <h2>
-          Please download the consent form&nbsp;
-          <a href="./actlab_online_consent.pdf">here</a>.
+          Please download the consent form
+          <a href="./actlab_online_consent.pdf">here</a><br />and review before
+          continuing.
         </h2>
         <embed
           src="./actlab_online_consent.pdf"
@@ -67,15 +70,22 @@
     </div>
     <script type="text/javascript">
       document.getElementById("accept").onclick = function () {
-        var current_url = window.location.href;
-        var url = new URL(current_url);
+        var url = new URL(window.location.href);
         var next_url = url.searchParams.get("dest");
-        console.log(next_url);
         if (next_url === null) {
           console.error("URL not specified!");
         } else {
-          // try e.g. https://actlabyale.github.io/web-consent?dest=https://github.com/aforren1?tab=repositories
-          window.location.href = next_url;
+          // try e.g. https://actlabyale.github.io/web-consent?dest=https%3A%2F%2Fgithub.com%2Fsdmcdougle%3Ftab%3Drepositories&prolific=1
+          url.searchParams.delete("dest");
+          // append parameters to destination URL and go
+          var new_url_params = new URL(next_url).searchParams.toString();
+          var sep = new_url_params.length > 0 ? "&" : "?";
+          var str_args = url.searchParams.toString();
+          var final_url = next_url + sep + str_args;
+          // TODO: comment this out for the "real deal"
+          alert("Navigating to " + final_url);
+          // finally redirect to the experiment URL
+          window.location.href = final_url;
         }
       };
     </script>
