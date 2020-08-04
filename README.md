@@ -19,3 +19,4 @@ Additional parameters added by the service (i.e. the participant number) _should
 Note that we need a polyfill to allow URL parsing for Internet Explorer.
 
 TODO: Update consent to latest!
+TODO: https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage for detecting previous consent? Or show every time? Show every time, b/c consent may change.

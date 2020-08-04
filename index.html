@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <title>ACT Lab Online Consent</title>
     <script src="https://polyfill.io/v3/polyfill.min.js?version=3.52.1&features=URL"></script>
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
     <style>
       body {
         background-color: #333333;
@@ -35,15 +36,32 @@
       .button:hover {
         opacity: 1;
       }
+      #logo {
+        height: auto;
+        width: auto;
+        max-width: 150px;
+        max-height: 150px;
+        position: absolute;
+      }
+      .header h1 {
+        text-align: center;
+        float: center;
+      }
     </style>
   </head>
 
   <body>
-    <div align="center">
+    <div class="header">
+      <a href="http://actcompthink.org/"
+        ><img id="logo" src="header_small.png"
+      /></a>
       <h1>ACT Lab Online Consent</h1>
+    </div>
+
+    <div align="center">
       <h3>
         Please read the consent form below, and either<br />click the
-        <span style="color: #4caf50;">ACCEPT</span> button to
+        <span style="color: #4caf50;">ACCEPT</span> button below to
         <span style="color: #4caf50;">continue</span>,<br />
         or <span style="color: #d8565f;">CLOSE</span> the tab to
         <span style="color: #d8565f;">decline</span>.
@@ -56,17 +74,19 @@
         <h2>Your browser does not support embedded PDFs.</h2>
         <h2>
           Please download the consent form
-          <a href="./actlab_online_consent.pdf">here</a><br />and review before
+          <a href="./actlab_online_consent.pdf">here</a><br />and read before
           continuing.
         </h2>
         <embed
           src="./actlab_online_consent.pdf"
-          style="width: 70%; height: 75vh;"
+          style="width: 70%; height: 72vh;"
           type="application/pdf"
         />
       </object>
       <br />
-      <button id="accept" class="button accept">ACCEPT (Will Redirect)</button>
+      <button id="accept" class="button accept">
+        ACCEPT (will redirect to experiment)
+      </button>
     </div>
     <script type="text/javascript">
       document.getElementById("accept").onclick = function () {
