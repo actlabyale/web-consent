@@ -1,3 +1,5 @@
+Test URL: https://actlabyale.github.io/web-consent?dest=https://github.com/sdmcdougle?tab=1&prolific=1
+
 The general idea is that when we post a study on Prolific/MTurk/etc, we would set the URL to be of the form:
 
 ```
