@@ -6,7 +6,7 @@
     <script src="https://polyfill.io/v3/polyfill.min.js?version=3.52.1&features=URL"></script>
     <style>
       body {
-        background-color: #222222;
+        background-color: #333333;
         font-family: "Arial", Gadget, sans-serif;
         color: #eeeeee;
       }
@@ -75,15 +75,16 @@
         if (next_url === null) {
           console.error("URL not specified!");
         } else {
-          // try e.g. https://actlabyale.github.io/web-consent?dest=https%3A%2F%2Fgithub.com%2Fsdmcdougle%3Ftab%3Drepositories&prolific=1
+          // try e.g. https://actlabyale.github.io/web-consent?dest=https://github.com/sdmcdougle&prolific=1
           url.searchParams.delete("dest");
           // append parameters to destination URL and go
-          var new_url_params = new URL(next_url).searchParams.toString();
-          var sep = new_url_params.length > 0 ? "&" : "?";
           var str_args = url.searchParams.toString();
-          var final_url = next_url + sep + str_args;
+          var final_url = next_url + "?" + str_args;
           // TODO: comment this out for the "real deal"
-          alert("Navigating to " + final_url);
+          var res = confirm("Navigating to " + final_url);
+          if (!res) {
+            return;
+          }
           // finally redirect to the experiment URL
           window.location.href = final_url;
         }

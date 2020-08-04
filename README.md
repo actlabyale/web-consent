@@ -7,11 +7,13 @@ https://actlabyale.github.io/web-consent?dest=<interesting URL>
 e.g.
 
 ```
-https://actlabyale.github.io/web-consent?dest=https%3A%2F%2Fgithub.com%2Fsdmcdougle%3Ftab%3Drepositories&id=100
+https://actlabyale.github.io/web-consent?dest=https://github.com/sdmcdougle&prolific=1
 ```
 
-(sort of annoying thing right now-- need to pass the experiment URL through `encodeURIComponent` so that the link passes everything properly).
+Make sure that any parameters are specified in the Prolific dialog (e.g. `&group=b`), not as part of the experiment URL (e.g. `https://actlabyale.github.io/web-consent?dest=https://github.com/sdmcdougle?tab=1&prolific=1` is difficult to parse?)
 
 Additional parameters added by the service (i.e. the participant number) _should_ be added properly to the end (see e.g. `&id=100` above).
+
+Note that we need a polyfill to allow URL parsing for Internet Explorer.
 
 TODO: Update consent to latest!
