@@ -18,4 +18,4 @@ Additional parameters added by the service (i.e. the participant number) _should
 
 Note that we need a polyfill to allow URL parsing for Internet Explorer.
 
-TODO: Update consent to latest!
+The duration of time spent on the consent form is recorded as `consentTime` in the URL.

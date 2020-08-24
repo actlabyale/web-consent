@@ -98,6 +98,7 @@
     </div>
     <script type="text/javascript">
       var startTime;
+      var endTime;
       document.addEventListener("DOMContentLoaded", function () {
         // take a timestamp of when they start the consent form
         // (milliseconds since Unix epoch)
@@ -121,7 +122,7 @@
         } else {
           // try e.g. https://actlabyale.github.io/web-consent?dest=https://github.com/sdmcdougle&prolific=1
           url.searchParams.delete("dest");
-          url.searchParams.append("startTime", startTime);
+          url.searchParams.append("consentTime", Date.now() - startTime);
           // append parameters to destination URL and go
           var str_args = url.searchParams.toString();
           var final_url = next_url + "?" + str_args;
