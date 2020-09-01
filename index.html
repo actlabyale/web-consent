@@ -63,12 +63,12 @@
       <a href="http://actcompthink.org/"
         ><img id="logo" src="header_small.png"
       /></a>
-      <div align="center" style="background-color: #ffffff;">
+      <div align="center" style="background-color: #ffffff">
         <noscript
           ><h1>
-            <span style="color: #d8565f;"
+            <span style="color: #d8565f"
               >JavaScript is required for this site to work.</span
-            ><br /><span style="color: #000000;"
+            ><br /><span style="color: #000000"
               >Please enable JavaScript and refresh the page to continue.</span
             >
           </h1></noscript
@@ -80,15 +80,15 @@
     <div align="center">
       <h3>
         Please read the consent form below, and either<br />click the
-        <span style="color: #4caf50;">ACCEPT</span> button below to
-        <span style="color: #4caf50;">continue</span>.<br />
-        <span style="color: #d8565f;">CLOSE</span> the tab and select the
-        <span style="color: #ffff00;">"Stop without completing"</span> button on
-        Prolific to <span style="color: #d8565f;">decline</span>.
+        <span style="color: #4caf50">ACCEPT</span> button below to
+        <span style="color: #4caf50">continue</span>.<br />
+        <span style="color: #d8565f">CLOSE</span> the tab and select the
+        <span style="color: #ffff00">"Stop without completing"</span> button on
+        Prolific to <span style="color: #d8565f">decline</span>.
       </h3>
       <object
         data="./actlab_online_consent.pdf"
-        style="width: 70%; height: 72vh;"
+        style="width: 70%; height: 72vh"
         type="application/pdf"
       >
         <h2>Your browser does not support embedded PDFs.</h2>
@@ -99,7 +99,7 @@
         </h2>
         <embed
           src="./actlab_online_consent.pdf"
-          style="width: 70%; height: 72vh;"
+          style="width: 70%; height: 72vh"
           type="application/pdf"
         />
       </object>
@@ -139,10 +139,10 @@
           var str_args = url.searchParams.toString();
           var final_url = next_url + "?" + str_args;
           // TODO: comment this out for the "real deal"
-          var res = confirm("Navigating to " + final_url);
-          if (!res) {
-            return;
-          }
+          // var res = confirm("Navigating to " + final_url);
+          // if (!res) {
+          //   return;
+          // }
           // finally redirect to the experiment URL
           window.location.href = final_url;
         }
