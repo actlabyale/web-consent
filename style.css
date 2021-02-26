@@ -1,0 +1,42 @@
+body {
+  background-color: #333333;
+  font-family: "Arial", Gadget, sans-serif;
+  color: #eeeeee;
+}
+a:link {
+  color: hotpink;
+}
+h1 {
+  font-size: xx-large;
+}
+.button {
+  background-color: #4caf50;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 4px 2px;
+  opacity: 0.9;
+  transition: 0.3s;
+  display: inline-block;
+  text-decoration: none;
+  cursor: pointer;
+}
+.button:hover {
+  opacity: 1;
+}
+#logo {
+  height: auto;
+  width: auto;
+  max-width: 150px;
+  max-height: 150px;
+  position: absolute;
+  border-radius: 8px;
+}
+.header h1 {
+  text-align: center;
+  float: center;
+}
